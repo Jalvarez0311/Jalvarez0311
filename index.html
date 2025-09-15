@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Jorgeandres' Website</title>
-  </head>
-  <body>
-    <h1>Hello, welcome to my site!</h1>
-    <p>This site is hosted with GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jorgeandres Alvarez | Computer Science</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /*Base*/
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f9fafa; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { font-weight: 600; }
+
+    /*Navbar*/
+    nav { position: fixed; top: 0; width: 100%; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1000; }
+    nav ul { display: flex; justify-content: center; padding: 1rem; list-style: none; }
+    nav ul li { margin: 0 1rem; }
+    nav ul li a { color: #333; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: #0077cc; }
+
+    /*Header Sections*/
+    section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+    section:nth-child(even) { background: #f0f4f8; }
+    section h2 { text-align: center; margin-bottom: 40px; color: #0077cc; }
+
+    /*Heroes*/
+    #hero { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+    #hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    #hero p { font-size: 1.2rem; color: #666; margin-bottom: 20px; }
+    .socials a { margin: 0 10px; font-size: 1.5rem; color: #0077cc; transition: transform 0.3s; }
+    .socials a:hover { transform: scale(1.2); }
+
+    /*Personal Skills*/
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; text-align: center; }
+    .skill { padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.3s, background 0.3s; }
+    .skill:hover { transform: translateY(-5px); background: #e8f4ff; }
+    .skill i { font-size: 2rem; margin-bottom: 10px; color: #0077cc; }
+
+    /*Experience/Projects*/
+    .card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .card h3 { margin-bottom: 10px; color: #0077cc; }
+    .card ul { margin-left: 20px; list-style: disc; }
+
+    /*Footer*/
+    footer { text-align: center; padding: 20px; background: #ffffff; border-top: 1px solid #ddd; color: #666; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Jorgeandres Alvarez</h1>
+    <p>Computer Science Student | Embedded Systems | AI & Computer Vision</p>
+    <div class="socials">
+      <a href="https://github.com/Jalvarez0311" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:jorgeandresalvarez@aol.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>Florida Polytechnic University</h3>
+      <p>Bachelor’s in Computer Science | GPA: 3.40</p>
+      <p>Expected Graduation: May 2026</p>
+      <p>Roles: Presidential Ambassador, SHPE Member, Webmaster IEEE Society (2024)</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><i class="fa-brands fa-cuttlefish"></i><p>C / C++</p></div>
+      <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
+      <div class="skill"><i class="fab fa-java"></i><p>Java</p></div>
+      <div class="skill"><i class="fas fa-database"></i><p>SQL & DBMS</p></div>
+      <div class="skill"><i class="fas fa-robot"></i><p>AI & Computer Vision</p></div>
+      <div class="skill"><i class="fas fa-network-wired"></i><p>ROS2 & Networking</p></div>
+      <div class="skill"><i class="fas fa-language"></i><p>Bilingual: Spanish</p></div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>Wiring Technologies Inc. – Low-Voltage Technician</h3>
+      <p>Lakeland, FL | Dec 2024 – Aug 2025</p>
+      <ul>
+        <li>Installed infrastructure for data, coaxial, power, and nurse call wiring.</li>
+        <li>Worked on Orlando Health hospital project in Lakeland Heights.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Integrity School of the Arts – Coding & Math Tutor</h3>
+      <p>Lakeland, FL | Aug 2022 – May 2025</p>
+      <ul>
+        <li>Taught Python, C++, and Java basics to classes of 12–15 students.</li>
+        <li>Tutored students in Pre-Algebra, Geometry, and Algebra 1.</li>
+        <li>Founded Esports program for student competitions nationwide.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Socket-Based Network Project</h3>
+      <p>Nov 2024</p>
+      <p>Developed server for file uploads/downloads between connected clients.</p>
+    </div>
+    <div class="card">
+      <h3>CRM Software Project</h3>
+      <p>Jan 2024 – Present</p>
+      <p>Designed a database for Bill Krautler Photography and Hazely Corp.</p>
+    </div>
+    <div class="card">
+      <h3>RoboBoat Project</h3>
+      <p>Aug 2025 – Present</p>
+      <p>Created programs for an autonomous boat using machine learning.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Jorgeandres Alvarez | Made with ❤️ & GitHub Pages</p>
+  </footer>
+
+</body>
 </html>
