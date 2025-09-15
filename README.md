@@ -12,7 +12,7 @@
 </h4>
 </top>
 
-## Buenos Dias! 👋 My name is Jorgeandres Alvarez. I am currently pursuing my Bachelor's Degree in Computer Science at Florida Polytechnic University, with a concentration in Software Engineering. I enjoy working in Backend Development and Artificial Intelligence. I have a strong will to learn and am always learning new skills. "The best teachers never stop learning".  
+## Buenos Dias! 👋 My name is Jorgeandres Alvarez. I am currently pursuing my Bachelor's Degree in Computer Science at Florida Polytechnic University, with a concentration in Software Engineering. I enjoy working in Backend Development, Integrated Systems, and Artificial Intelligence. I have a strong will to learn and am always learning new skills. "The best teachers never stop learning".  
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=Jalvarez0311&label=Profile%20views&color=0e75b6&style=flat" alt="Jalvarez0311" /> </p>
 
