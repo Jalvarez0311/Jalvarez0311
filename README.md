@@ -20,3 +20,5 @@
 <a href="https://www.kartkrew.org/index.html" target="blank"><caption>Check out one of my favorite fan games!</caption><img align="right" src="https://c.tenor.com/-ERXxQzQK_YAAAAj/sonic-sprite-sonic1.gif" alt="Robotnik Ring Racers" height="100" width="100" /></a>
 
 Visit my <a href="https://jalvarez0311.github.io/Jalvarez0311/">website<a/>!
+
+Also Check out my <a href="Jorgeandres_Alvarez_Computer_Science_2025_Resume.pdf">resume!</a>!
