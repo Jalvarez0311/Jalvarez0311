@@ -17,6 +17,6 @@
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=Jalvarez0311&label=Profile%20views&color=0e75b6&style=flat" alt="Jalvarez0311" /> </p>
 
 <p align = "center">
-<a href="https://www.kartkrew.org/index.html" target="blank"><caption>Check out one of my favorite fan games!</caption><img align="right" src="https://c.tenor.com/-ERXxQzQK_YAAAAj/sonic-sprite-sonic1.gif" alt="Robotnik Ring Racers" height="100" width="100" /></a>
+<a href="https://www.kartkrew.org/index.html" target="blank"><img align="right" src="https://c.tenor.com/-ERXxQzQK_YAAAAj/sonic-sprite-sonic1.gif" alt="Robotnik Ring Racers" height="100" width="100" /></a><caption>Check out one of my favorite fan games!</caption>
 
 Visit my <a href="https://jalvarez0311.github.io/Jalvarez0311/">website<a/>!
