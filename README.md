@@ -21,4 +21,4 @@
 
 Visit my <a href="https://jalvarez0311.github.io/Jalvarez0311/">website<a/>!
 
-Also Check out my <a href="Jorgeandres_Alvarez_Computer_Science_2025_Resume.pdf">resume!</a>!
+Also Check out my <a href="Jorgeandres_Alvarez_Computer_Science_2025.pdf">resume!</a>!
