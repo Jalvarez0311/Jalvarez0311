@@ -1,162 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jorgeandres Alvarez | Computer Science</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /*Base*/
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f9fafa; color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    h1, h2, h3 { font-weight: 600; }
+import React from "react";
 
-    /*Navbar*/
-    nav { position: fixed; top: 0; width: 100%; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1000; }
-    nav ul { display: flex; justify-content: center; padding: 1rem; list-style: none; }
-    nav ul li { margin: 0 1rem; }
-    nav ul li a { color: #333; font-weight: 500; transition: color 0.3s; }
-    nav ul li a:hover { color: #0077cc; }
+// Single-file React component (Tailwind CSS used for styling)
+// Default export so this file can be dropped into a React app (e.g. src/App.jsx)
 
-    /*Header Sections*/
-    section { padding: 80px 20px; max-width: 1000px; margin: auto; }
-    section:nth-child(even) { background: #f0f4f8; }
-    section h2 { text-align: center; margin-bottom: 40px; color: #0077cc; }
+export default function JorgeAlvarezPortfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+      {/* NAV */}
+      <header className="fixed inset-x-0 top-0 z-40 bg-white/60 backdrop-blur-sm border-b border-slate-200">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-md bg-gradient-to-br from-indigo-500 to-sky-400 flex items-center justify-center text-white font-semibold">JA</div>
+            <div>
+              <div className="font-semibold">Jorgeandres Alvarez</div>
+              <div className="text-xs text-slate-600">Computer Science · Florida Polytechnic University</div>
+            </div>
+          </div>
+          <nav className="hidden md:flex items-center gap-4 text-sm">
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#experience" className="hover:underline">Experience</a>
+            <a href="#projects" className="hover:underline">Projects</a>
+            <a href="#skills" className="hover:underline">Skills</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+          </nav>
+        </div>
+      </header>
 
-    /*Heroes*/
-    #hero { display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100vh; text-align: center; } /* might change justify content to center */
-    #hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    #hero p { font-size: 1.2rem; color: #666; margin-bottom: 20px; }
-    .hero-image{ margin-bottom: 20px; }
-    .socials a { margin: 0 10px; font-size: 1.5rem; color: #0077cc; transition: transform 0.3s; }
-    .socials a:hover { transform: scale(1.2); }
-    
+      {/* HERO */}
+      <main className="pt-24">
+        <section className="relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Jorgeandres Alvarez</h1>
+              <p className="mt-4 text-slate-700 max-w-xl">
+                Computer Science student at Florida Polytechnic University (Expected Graduation: May 2026) specializing in
+                software engineering, networking, and machine learning. Experienced in building client-server systems,
+                autonomous vehicle networking, and AI research involving computer vision.
+              </p>
 
-    /*Personal Skills*/
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; text-align: center; }
-    .skill { padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.3s, background 0.3s; }
-    .skill:hover { transform: translateY(-5px); background: #e8f4ff; }
-    .skill i { font-size: 2rem; margin-bottom: 10px; color: #0077cc; }
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="mailto:jorgeandresalvarez@aol.com" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-600 text-white font-medium">Email</a>
+                <a href="https://github.com/Jalvarez0311" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300">GitHub</a>
+                <a href="#projects" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300">View Projects</a>
+              </div>
 
-    /*Experience/Projects*/
-    .card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .card h3 { margin-bottom: 10px; color: #0077cc; }
-    .card ul { margin-left: 20px; list-style: disc; }
+              <div className="mt-6 text-sm text-slate-600">
+                <div><strong>Location:</strong> Lakeland, FL</div>
+                <div className="mt-1"><strong>Phone:</strong> (727) 415-4976</div>
+                <div className="mt-1"><strong>Email:</strong> jorgeandresalvarez@aol.com</div>
+              </div>
+            </div>
 
-    /*Footer*/
-    footer { text-align: center; padding: 20px; background: #ffffff; border-top: 1px solid #ddd; color: #666; }
-  </style>
-</head>
-<body>
+            <div className="relative">
+              <div className="rounded-2xl p-6 shadow-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200">
+                <div className="text-sm text-slate-500">Education</div>
+                <h3 className="mt-2 font-semibold">Florida Polytechnic University</h3>
+                <p className="text-sm text-slate-600">Bachelor's in Computer Science — GPA 3.40/4.00</p>
+                <p className="mt-2 text-xs text-slate-500">Expected Graduation: May 2026</p>
 
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </nav>
+                <div className="mt-4 text-sm">
+                  <div className="font-medium text-slate-700">Relevant Coursework</div>
+                  <ul className="mt-2 text-xs text-slate-600 list-disc list-inside space-y-1">
+                    <li>Data Structures, Machine Learning, Database I, Statistics</li>
+                    <li>Algorithm Analysis and Design, Computational Linear Algebra</li>
+                    <li>Computer Networks, OOP, Secure Software Engineering</li>
+                    <li>Formal Languages, UI/UX, Software Analysis & Design, Operating Systems Concepts</li>
+                  </ul>
+                </div>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <img src="https://floridapoly.edu/wp-content/uploads/2025/09/jorgeandres-alvarez.webp" alt="Hero Image" class="hero-image" width=450px height=500px>
-    <h1>Jorgeandres Alvarez</h1>
-    <p>Computer Science Student | Embedded Systems | AI & Computer Vision</p>
-    <div class="socials">
-      <a href="https://github.com/Jalvarez0311" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jorgeandres-alvarez-284037277/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:jorgeandresalvarez@aol.com"><i class="fas fa-envelope"></i></a>
+              </div>
+
+              {/* decorative element */}
+              <div className="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-indigo-100 opacity-40 blur-3xl"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* EXPERIENCE */}
+        <section id="experience" className="max-w-6xl mx-auto px-6 py-12">
+          <h2 className="text-2xl font-bold">Experience</h2>
+          <div className="mt-6 space-y-6">
+            <article className="p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold">AI Medical Research Assistant</h3>
+                  <div className="text-sm text-slate-600">Florida Polytechnic University — Sep 2025 — Present</div>
+                </div>
+                <div className="text-xs text-slate-500">Computer Vision · ML</div>
+              </div>
+
+              <p className="mt-3 text-sm text-slate-700">
+                Conducted research using computer vision and smartphones to assist thyroid cancer diagnosis for lower-resource settings. Trained a vision-language model with real microscopic images and used CNNs as the base model for the ML pipeline.
+              </p>
+            </article>
+
+            <article className="p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold">Autonomous Vehicle Networks Lead</h3>
+                  <div className="text-sm text-slate-600">Florida Polytechnic University — Aug 2025 — Present</div>
+                </div>
+                <div className="text-xs text-slate-500">Networking · Robotics</div>
+              </div>
+
+              <p className="mt-3 text-sm text-slate-700">
+                Designed network communication for an autonomous boat using a Wi‑Fi home base attached to the hull and a GUI to display telemetry. Developed a pathfinding algorithm to navigate challenges and complete tasks (buoy traversal, docking, targeting).
+              </p>
+            </article>
+
+            <article className="p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold">Low‑Voltage / Cable Technician</h3>
+                  <div className="text-sm text-slate-600">Wiring Technologies Inc. — Dec 2024 — Aug 2025</div>
+                </div>
+                <div className="text-xs text-slate-500">Hardware · Infrastructure</div>
+              </div>
+
+              <p className="mt-3 text-sm text-slate-700">
+                Installed wiring infrastructure for a new hospital in south Lakeland. Streamlined cable routing to reduce material use while preserving system integrity and learning how physical-layer decisions affect higher-level data systems.
+              </p>
+            </article>
+
+            <article className="p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold">Coding & Math Tutor</h3>
+                  <div className="text-sm text-slate-600">Integrity School of the Arts — Aug 2022 — May 2025</div>
+                </div>
+                <div className="text-xs text-slate-500">Teaching · Mentoring</div>
+              </div>
+
+              <p className="mt-3 text-sm text-slate-700">
+                Taught Python, C++, and Java to middle and high school students (class sizes 10–20). Designed hands-on lesson plans and projects to reinforce programming concepts.
+              </p>
+            </article>
+
+          </div>
+        </section>
+
+        {/* PROJECTS */}
+        <section id="projects" className="max-w-6xl mx-auto px-6 py-12 bg-gradient-to-b from-white to-slate-50">
+          <h2 className="text-2xl font-bold">Projects</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <div className="text-sm text-slate-500">CRM Software</div>
+              <h3 className="mt-2 font-semibold">CRM Software Project</h3>
+              <p className="mt-2 text-sm text-slate-700">Sponsored project creating CRM/database/customer management software for two startups seeking affordable, efficient solutions. (Jan 2024 — Present)</p>
+            </div>
+
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <div className="text-sm text-slate-500">Networking</div>
+              <h3 className="mt-2 font-semibold">Socket‑Based Network Project</h3>
+              <p className="mt-2 text-sm text-slate-700">Built a client-server file sharing service enabling secure upload/downloads to a centralized server. (Nov 2024)</p>
+            </div>
+
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <div className="text-sm text-slate-500">Audio Processing</div>
+              <h3 className="mt-2 font-semibold">Audio Conversion Project</h3>
+              <p className="mt-2 text-sm text-slate-700">Part of a team that implemented an app for uploading audio, auto-enhancing quality, and generating analytical statistics for files. (Dec 2022)</p>
+            </div>
+          </div>
+        </section>
+
+        {/* LEADERSHIP */}
+        <section id="leadership" className="max-w-6xl mx-auto px-6 py-12">
+          <h2 className="text-2xl font-bold">Leadership & Involvement</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <h4 className="font-semibold">Presidential Ambassador</h4>
+              <p className="text-sm text-slate-600">2025–2026 — Represented Florida Poly at events, led tours, and engaged with partners and community service.</p>
+            </div>
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <h4 className="font-semibold">SHPE Member</h4>
+              <p className="text-sm text-slate-600">2025–2026 — Florida Polytechnic chapter member (Region 7).</p>
+            </div>
+            <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <h4 className="font-semibold">IEEE Webmaster</h4>
+              <p className="text-sm text-slate-600">2024–2025 — Managed social media and supported Computer Society meeting topics.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* SKILLS */}
+        <section id="skills" className="max-w-6xl mx-auto px-6 py-12 bg-white">
+          <h2 className="text-2xl font-bold">Technical Skills</h2>
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              'C', 'C++', 'Python', 'Java', 'SQL', 'HTML', 'Assembly', 'Excel'
+            ].map((s) => (
+              <div key={s} className="px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700">{s}</div>
+            ))}
+          </div>
+
+          <div className="mt-6">
+            <h3 className="text-lg font-medium">Software & Tools</h3>
+            <div className="mt-3 flex flex-wrap gap-3 text-sm text-slate-700">
+              {['VS Code','ROS2','Gazebo','MySQL','PyCharm','VirtualBox','Wireshark','Ubuntu','Terminal'].map(t => (
+                <div key={t} className="px-3 py-2 rounded-lg border border-slate-200">{t}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT / FOOTER */}
+        <section id="contact" className="max-w-6xl mx-auto px-6 py-12">
+          <div className="p-8 rounded-2xl bg-gradient-to-r from-indigo-50 to-sky-50 border border-slate-200">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h3 className="text-xl font-bold">Get in touch</h3>
+                <p className="mt-2 text-sm text-slate-700">Email: <a href="mailto:jorgeandresalvarez@aol.com" className="underline">jorgeandresalvarez@aol.com</a> · Phone: (727) 415-4976</p>
+                <p className="mt-1 text-sm">GitHub: <a href="https://github.com/Jalvarez0311" target="_blank" rel="noreferrer" className="underline">github.com/Jalvarez0311</a></p>
+              </div>
+              <div className="flex gap-3">
+                <a href="mailto:jorgeandresalvarez@aol.com" className="px-4 py-2 rounded-full bg-indigo-600 text-white font-medium">Email</a>
+                <a href="/Jorgeandres_Alvarez_Computer_Science_2025.pdf" className="px-4 py-2 rounded-full border">Download Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <footer className="mt-8 text-sm text-slate-500 text-center">© {new Date().getFullYear()} Jorgeandres Alvarez · Built with React & Tailwind</footer>
+        </section>
+
+      </main>
     </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>Florida Polytechnic University</h3>
-      <p>Bachelor’s in Computer Science | GPA: 3.40</p>
-      <p>Expected Graduation: May 2026</p>
-      <p>Roles: Presidential Ambassador, SHPE Member, Webmaster IEEE Society (2024)</p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill"><i class="fa-brands fa-cuttlefish"></i><p>C / C++</p></div>
-      <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
-      <div class="skill"><i class="fab fa-java"></i><p>Java</p></div>
-      <div class="skill"><i class="fas fa-database"></i><p>SQL & DBMS</p></div>
-      <div class="skill"><i class="fas fa-robot"></i><p>AI & Computer Vision</p></div>
-      <div class="skill"><i class="fas fa-network-wired"></i><p>ROS2 & Networking</p></div>
-      <div class="skill"><i class="fas fa-language"></i><p>Bilingual: Spanish</p></div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <div class="card">
-      <h3>Florida Polytechnic University – Presidential Ambassador</h3>
-      <p>Lakeland, FL | May 2025 – Present</p>
-      <ul>
-        <li>One of nine individuals chosen from the school to represent President and the school's values</li>
-        <li>Given tours to sponsoring companies, government officials, and personal donors to the school</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Wiring Technologies Inc. – Low-Voltage Technician</h3>
-      <p>Lakeland, FL | Dec 2024 – Aug 2025</p>
-      <ul>
-        <li>Installed infrastructure for data, coaxial, power, and nurse call wiring.</li>
-        <li>Worked on Orlando Health hospital project in Lakeland Heights.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Integrity School of the Arts – Coding & Math Tutor</h3>
-      <p>Lakeland, FL | Aug 2022 – May 2025</p>
-      <ul>
-        <li>Taught Python, C++, and Java basics to classes of 12–15 students.</li>
-        <li>Tutored students in Pre-Algebra, Geometry, and Algebra 1.</li>
-        <li>Founded Esports program for student competitions nationwide.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>CRM Software Project</h3>
-      <p>Jan 2024 – Present</p>
-      <p>Designed a database for Bill Krautler Photography and Hazely Corp.</p>
-    </div>
-    <div class="card">
-      <h3>RoboBoat Project</h3>
-      <p>Aug 2025 – Present</p>
-      <p>Created programs for an autonomous boat using machine learning.</p>
-    </div>
-    <div class="card">
-      <h3>Socket-Based Network Project</h3>
-      <p>Nov 2024</p>
-      <p>Developed server for file uploads/downloads between connected clients.</p>
-    </div>
-    <div class="card">
-      <h3>Python Audio Project</h3>
-      <p>Dec 2023</p>
-      <p>Used Python to clean, modify, and analyze a recorded audio file</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Jorgeandres Alvarez | Made with ❤️ & GitHub Pages</p>
-  </footer>
-
-</body>
-</html>
+  );
+}
